@@ -13,11 +13,11 @@ st.set_page_config(page_title="House Price Predictor", layout="wide")
 # ----------------------- Load Models ----------------------- #
 @st.cache_resource
 def load_xgb_model():
-    return joblib.load('D:/ProjectResearch/xgb_model.pkl')
+    return joblib.load('xgb_model.pkl')
 
 @st.cache_resource
 def load_scaler():
-    return joblib.load('D:/ProjectResearch/scaler.pkl')
+    return joblib.load('scaler.pkl')
 
 async def load_models():
     loop = asyncio.get_event_loop()
