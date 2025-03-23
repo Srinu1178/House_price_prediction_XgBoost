@@ -119,20 +119,20 @@ def suggest_bathroom_options(area_type, sqft, bhk):
         if bhk == 1:
             return [1, 2]
         elif bhk == 2:
-            return [2, 3]
+            return [1,2, 3]
         elif bhk == 3:
-            return [2, 3, 4]
+            return [1,2, 3, 4]
         elif bhk >= 4:
-            return [3, 4, 5]
+            return [1, 2, 3, 4, 5]
     elif area_type == "Built-up  Area":
         if bhk == 1:
             return [1]
         elif bhk == 2:
             return [1, 2]
         elif bhk == 3:
-            return [2, 3]
+            return [1, 2, 3]
         else:
-            return [3, 4]
+            return [1, 2, 3, 4]
     elif area_type == "Carpet  Area":
         return list(range(1, min(4, bhk + 2)))
     else:
